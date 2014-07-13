@@ -1,0 +1,13 @@
+from sys import argv 
+import datetime 
+import time
+
+script, a_doc = argv
+
+achievement = raw_input(" What did you achieve? >")
+achieved = open(a_doc, 'a+')
+d= datetime.datetime.fromtimestamp(time.time())
+achieved.write( achievement + " accomplished on: " + d.strftime("%d %b %Y ") + '\n')
+
+print "Good job!"
+achieved.close()
